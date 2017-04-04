@@ -75,10 +75,6 @@ The easiest way to "uninstall"/disable VivaldiHooks is to delete **{instdir}\viv
 
 ![bookmarks-button.png](screenshots/bookmarks-button.png)
 
-### [extensions-buttons-menu-settings.js](vivaldi/hooks/extensions-buttons-menu-settings.js)
-
-![extensions-buttons-menu-settings.png](screenshots/extensions-buttons-menu-settings.png)
-
 ### [go-button.js](vivaldi/hooks/go-button.js)
 
 ![go-button.png](screenshots/go-button.png)
@@ -94,10 +90,6 @@ The easiest way to "uninstall"/disable VivaldiHooks is to delete **{instdir}\viv
 ### [speeddial-shortcuts.js](vivaldi/hooks/speeddial-shortcuts.js)
 
 ![speeddial-shortcuts.png](screenshots/speeddial-shortcuts.png)
-
-### [zoom-buttons.js](vivaldi/hooks/zoom-buttons.js)
-
-![zoom-buttons.png](screenshots/zoom-buttons.png)
 
 ### [searchfield-current-engine-icon.js](vivaldi/hooks/searchfield-current-engine-icon.js)
 
