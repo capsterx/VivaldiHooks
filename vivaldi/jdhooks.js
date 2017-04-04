@@ -102,6 +102,7 @@
                                 if (undefined === cfg.JDHOOKS_STARTUP.scripts) cfg.JDHOOKS_STARTUP.scripts = {};
 
                                 vivaldi.jdhooks._hooks = {};
+                                vivaldi.jdhooks._hooks_desc = {};
 
                                 for (var i in dirItems) {
                                     var dirItem = dirItems[i];
@@ -116,6 +117,20 @@
                                     if (dirItem.name === 'jdhooks-startup-settings.js') shouldBeLoaded = true;
 
                                     vivaldi.jdhooks._hooks[dirItem.name] = shouldBeLoaded;
+
+                                    function readFile(item) {
+                                      item.file(function(f) {
+                                        vivaldi.jdhooks._hooks_desc[item.name] = f.name;
+                                        let reader = new FileReader();
+
+                                        reader.onload = function(e) {
+                                          desc = this.result.split(/\n/)[0];
+                                          vivaldi.jdhooks._hooks_desc[item.name] = desc;
+                                        };
+                                        reader.readAsText(f);
+                                      });
+                                    };
+                                    readFile(dirItem);
 
                                     if (!shouldBeLoaded)
                                         continue;

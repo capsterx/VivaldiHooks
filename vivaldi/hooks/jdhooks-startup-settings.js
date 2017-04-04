@@ -100,6 +100,12 @@ vivaldi.jdhooks.hookClass('StartupSetting', function(reactClass) {
 
             for (scriptNum in scriptNames) {
                 var script = scriptNames[scriptNum];
+                var desc = vivaldi.jdhooks._hooks_desc[script];
+                var descNode = null;
+                if (desc != undefined && desc != null)
+                {
+                  descNode = React.createElement("div", null, desc);
+                }
 
                 var newLabel = !newScripts[script] ? null : React.createElement("span", {
                     style: {
@@ -120,7 +126,8 @@ vivaldi.jdhooks.hookClass('StartupSetting', function(reactClass) {
                             }),
                             React.createElement("span", null,
                                 script,
-                                newLabel
+                                newLabel,
+                                descNode
                             )
                         )
                     )
