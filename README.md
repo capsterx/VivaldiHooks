@@ -26,6 +26,18 @@ Another easy way: drag Vivaldi directory and drop it on **installhooks.bat**.
 
 ~~Note: **browser.html** will be overwritten.~~
 
+### Automatic (Mac/Linux)
+Just run **install.sh**. It will find installation path, if it's in a standard location (requires bash)
+
+If Vivaldi is installed in a write-restricted folder, you must run the script as root.
+
+You may specify a path in a command line:
+
+    ./install.sh "/Applications/Vivaldi.app/Contents/Versions/1.8.770.54/Vivaldi Framework.framework/Resources/"
+    sudo ./install.sh /opt/vivaldi/resources
+
+Note: **browser.html** will be automatically modified.
+
 ### Manual
 
 First of all, find Vivaldi installation folder (**{instdir}**):
@@ -44,10 +56,17 @@ right before a line with **bundle.js**.
 
 You may need to chmod new/updated files.
 
-## Deinstallation
+## Deinstallation 
 
+### Manual (Mac/Linux)
+Run install.sh with --uninstall
+    
+    ./install.sh --uninstall
+    ./install.sh --uninstall "/Applications/Vivaldi.app/Contents/Versions/1.8.770.54/Vivaldi Framework.framework/Resources/"
+    sudo ./install.sh --uninstall /opt/vivaldi/resources
+
+### Manual
 If some hooks cause Vivaldi to crash, you can remove just hook files.
-
 The easiest way to "uninstall"/disable VivaldiHooks is to delete **{instdir}\vivaldi\jdhooks.js**.
 
 ## Screenshots
