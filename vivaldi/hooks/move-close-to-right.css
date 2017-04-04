@@ -1,0 +1,13 @@
+.tab .close { /* move close button to right  */
+  order:1 !important; 
+  margin-right: 6px;
+}
+
+.tab .tab-audio{ /* move audio button to left  */
+  order:-1 !important;
+}
+
+.tab .favicon{ /* always show favicon, on Mac it disappears when you mouseover  */
+  display: inline !important;
+  margin-left: !important;
+}
