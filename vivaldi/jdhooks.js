@@ -534,6 +534,9 @@
                 if (typeof nrequire[i] === "object" && typeof nrequire[i][startmodule] === "function") {
                     vivaldi.jdhooks._modules = nrequire[i];
                 }
+								if (i == "c") { 
+									vivaldi.jdhooks._exports = nrequire[i]; 
+ 								}
             }
 
             if (!vivaldi.jdhooks._modules) {
